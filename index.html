@@ -440,7 +440,6 @@
     <div class="module-subtitle">Evaluation guidelines and anomaly logging manual for adversarial human evaluation raters</div>
 </div>
 
-<!-- Tab Navigation Header -->
 <nav class="tab-nav">
     <button class="tab-button active" onclick="switchPage('page1')">1. Stress-Test Prompting</button>
     <button class="tab-button" onclick="switchPage('page2')">2. Audit Frameworks</button>
@@ -451,7 +450,6 @@
 
 <div class="container">
 
-    <!-- PAGE 1: PROMPT FORMULA -->
     <div id="page1" class="tab-page active">
         <h2 class="page-title">🛠️ The Stress-Test Prompt Formula</h2>
         <p class="page-description">To build a high-yield prompt that intentionally exposes AI architecture weaknesses, raters must stack structural complexities using this rigorous 6-step blueprint.</p>
@@ -495,7 +493,6 @@
         </div>
     </div>
 
-    <!-- PAGE 2: DETECTION FRAMEWORKS -->
     <div id="page2" class="tab-page">
         <h2 class="page-title">🔬 Quality Audit Workflows & Mnemonics</h2>
         <p class="page-description">Core triage workflows and operational frameworks utilized by raters to systematically audit generations.</p>
@@ -591,76 +588,80 @@
         </div>
     </div>
 
-    <!-- PAGE 3: ARTIFACT GLOSSARY -->
     <div id="page3" class="tab-page">
-        <h2 class="page-title">📊 Common AI Anomaly Reference Glossary</h2>
-        <p class="page-description">Standardized nomenclature and descriptive formulas raters must employ when logging visual model breakdowns.</p>
+        <h2 class="page-title">📊 Common AI Anomaly Reference Glossary (B.O.U.N.D.A.R.I.E.S. Mapped)</h2>
+        <p class="page-description">Standardized nomenclature and detailed look-for checklists raters must utilize to classify image quality failures.</p>
         
         <div class="table-wrapper">
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 20%;">Artifact Type</th>
-                        <th style="width: 25%;">Visual Manifestation</th>
-                        <th style="width: 35%;">Standardized Rater Description Formula</th>
-                        <th style="width: 20%;">Diagnostic Axis</th>
+                        <th style="width: 25%;">Artifact Type Category</th>
+                        <th style="width: 35%;">Visual Manifestation & Look For Criteria</th>
+                        <th style="width: 40%;">Standardized Rater Description Formula</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td data-label="Artifact Type"><strong>Extra Fingers / Limbs</strong></td>
-                        <td>Hands rendering 6+ digits or extra limbs emerging out of frames.</td>
-                        <td><span class="text-danger">"The target hand structure displays an extra, anatomically incorrect sixth digit."</span></td>
-                        <td>C-CARRP: Count<br>BOUNDARIES: Numbers</td>
+                        <td data-label="Artifact Type Category"><strong>B &ndash; Boundaries</strong></td>
+                        <td>Inability to clearly tell where one object ends and another begins.<br><strong>Look for:</strong> Leaves becoming blobs, hair merging with clothes, objects fused together.</td>
+                        <td><span class="text-danger">"The foliage parameters fail to maintain clear distinction, causing separate leaf elements to blur into green amorphous blobs."</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Artifact Type"><strong>Missing Fingers</strong></td>
-                        <td>Hands displaying 4 or fewer digits, resulting in incomplete shapes.</td>
-                        <td><span class="text-danger">"The hand structure appears incomplete, missing essential phalangeal digits."</span></td>
-                        <td>C-CARRP: Count<br>BOUNDARIES: Numbers</td>
+                        <td data-label="Artifact Type Category"><strong>O &ndash; Organic Structures</strong></td>
+                        <td>Living structures failing to follow regular real-world biological growth patterns.<br><strong>Look for:</strong> Impossible plant growth, extra flower petals, strange branches, distorted animals.</td>
+                        <td><span class="text-danger">"The background timber exhibits anatomically impossible plant growth vectors, breaking authentic biological rules."</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Artifact Type"><strong>Digital Fusion (Melt)</strong></td>
-                        <td>Separate neighboring elements blended together into one mass.</td>
-                        <td><span class="text-danger">"The digits are fused together, displaying a melted structural profile."</span></td>
-                        <td>C-CARRP: Connect<br>BOUNDARIES: Boundaries</td>
+                        <td data-label="Artifact Type Category"><strong>U &ndash; Unnatural Textures</strong></td>
+                        <td>Surface textures losing realistic micro-geometry fields.<br><strong>Look for:</strong> Plastic skin appearances, waxy faces, smudged detail grids, artificial-looking fur.</td>
+                        <td><span class="text-danger">"The subject's facial skin texture displays a waxy, plastic rendering artifact devoid of realistic skin pores."</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Artifact Type"><strong>Floating Objects</strong></td>
-                        <td>Assets suspended mid-air without structural support or contact points.</td>
-                        <td><span class="text-danger">"The item appears suspended in mid-air without logical physical support."</span></td>
-                        <td>C-CARRP: Physics<br>BOUNDARIES: Integrity</td>
+                        <td data-label="Artifact Type Category"><strong>N &ndash; Numbers</strong></td>
+                        <td>Mathematical and anatomical quantity discrepancies across system assets.<br><strong>Look for:</strong> Extra fingers (6+), missing digits/limbs, duplicate accessories.</td>
+                        <td><span class="text-danger">"The left hand structure displays an extra, structurally invalid sixth phalangeal digit."</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Artifact Type"><strong>Warped Facials</strong></td>
-                        <td>Asymmetrical, melting, or distorted facial features.</td>
-                        <td><span class="text-danger">"The facial features appear warped, asymmetrical, and display waxy texturing."</span></td>
-                        <td>C-CARRP: Align<br>BOUNDARIES: Unnatural Textures</td>
+                        <td data-label="Artifact Type Category"><strong>D &ndash; Distortions</strong></td>
+                        <td>Structural asset configurations that are physically or geometrically unfeasible.<br><strong>Look for:</strong> Twisted anatomy, bent structures, impossible spatial geometry.</td>
+                        <td><span class="text-danger">"The metal support pillars bend at an angle that is physically implausible under real structural loads."</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Artifact Type"><strong>Asymmetric Reflection</strong></td>
-                        <td>Mirrors rendering wrong angles, incorrect poses, or wrong counts.</td>
-                        <td><span class="text-danger">"The mirror reflection is structurally inconsistent with the alignment of the scene."</span></td>
-                        <td>C-CARRP: Align<br>BOUNDARIES: Spatial Relationships</td>
+                        <td data-label="Artifact Type Category"><strong>A &ndash; Adjacent Materials</strong></td>
+                        <td>Neighboring materials failing to remain distinct, resulting in texture crossover.<br><strong>Look for:</strong> Hair turning into fabric weave, glass behaving like liquid, wood grains appearing on skin.</td>
+                        <td><span class="text-danger">"The subject's hair fibers blend directly into the woven coat lapel fabric, indicating an adjacent material texture crossover."</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Artifact Type"><strong>Pattern Degradation</strong></td>
-                        <td>Repeating structural sequences losing uniform alignment.</td>
-                        <td><span class="text-danger">"The repeated elements lose structural consistency and warp across the grid."</span></td>
-                        <td>C-CARRP: Repeat<br>BOUNDARIES: Repetition</td>
+                        <td data-label="Artifact Type Category"><strong>R &ndash; Repetition</strong></td>
+                        <td>Repeated elements losing structural uniformity, spacing accuracy, or identity consistency.<br><strong>Look for:</strong> Cloned background faces, broken geometric patterns, missing repetitions.</td>
+                        <td><span class="text-danger">"The sequential stadium seating rows warp across the grid, breaking uniform repetition rules."</span></td>
                     </tr>
                     <tr>
-                        <td data-label="Artifact Type"><strong>Garbled Typography</strong></td>
-                        <td>Letters turning into warped shapes or unreadable characters.</td>
-                        <td><span class="text-danger">"The signage contains illegible, garbled alphabetic glyphs that do not form real words."</span></td>
-                        <td>C-CARRP: Read</td>
+                        <td data-label="Artifact Type Category"><strong>I &ndash; Integrity</strong></td>
+                        <td>Objects failing to remain whole, coherent, or structurally anchored.<br><strong>Look for:</strong> Half-rendered objects, floating pieces, phantom elements missing contact roots.</td>
+                        <td><span class="text-danger">"A detached coffee cup segment appears suspended in the midground space as a floating phantom element."</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Artifact Type Category"><strong>E &ndash; Edges</strong></td>
+                        <td>Object boundary limits appearing blurry, unsharp, or structurally degraded.<br><strong>Look for:</strong> Smearing, melting perimeters, fuzzy transition boundaries.</td>
+                        <td><span class="text-danger">"The edge transition between the hand and the background surface shows significant smearing and melting artifacts."</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Artifact Type Category"><strong>S &ndash; Spatial Relationships</strong></td>
+                        <td>Objects failing to occupy three-dimensional perspective space logically.<br><strong>Look for:</strong> Floating items, incorrect mirror reflections, impossible overlaps, perspective mismatches.</td>
+                        <td><span class="text-danger">"The mirror plane plane fails to accurately track the background geometry, producing an impossible spatial layout."</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Artifact Type Category"><strong>Typography Decay</strong></td>
+                        <td>Warped shape paths substituting for authentic typographic engine glyphs.<br><strong>Look for:</strong> Random letters, nonsensical word strings, distorted typography.</td>
+                        <td><span class="text-danger">"The wall signage features illegible, garbled alphabetic glyphs that do not map to recognizable linguistic text."</span></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-    <!-- PAGE 4: EVALUATION MATRIX -->
     <div id="page4" class="tab-page">
         <h2 class="page-title">📊 The Stress-Test Evaluation Matrix</h2>
         <p class="page-description">Cross-reference matrix linking target adversarial prompts to specific failure zones, challenge mechanics, and rater auditing targets.</p>
@@ -703,7 +704,7 @@
                     <tr>
                         <td data-label="Failure Zone & Pattern">
                             <span class="badge bg-cat-2">Spatial & Occlusion</span>
-                            <span class="pattern-name">Overlapping & Hidden Subjects</span>
+                            <span class="pattern-name">Overlapping & Hidden Objects</span>
                         </td>
                         <td data-label="The Challenge Mechanics">Tests spatial permanence rules. Model must correctly infer unseen portions (occlusion) without fusing boundaries.</td>
                         <td>
@@ -801,7 +802,6 @@
         </div>
     </div>
 
-    <!-- PAGE 5: RATER REPORTING PROTOCOL -->
     <div id="page5" class="tab-page">
         <h2 class="page-title">📋 The Rater Reporting Engine & Logging Standards</h2>
         <p class="page-description">Standardized sequence rules and analytical reporting formats raters must follow when logging model vulnerabilities.</p>
@@ -854,7 +854,6 @@
 
 </div>
 
-<!-- Tab Navigation Switching Script -->
 <script>
     function switchPage(pageId) {
         // Deactivate all pages
